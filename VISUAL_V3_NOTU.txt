@@ -1,0 +1,15 @@
+ZNKSPOR Visual V3
+
+Bu sürümde:
+- Hero forma alanı hareketli ve sahneli hale getirildi
+- Ürün kartlarına daha güçlü ışık/hover efekti eklendi
+- Yeni vitrin sahnesi eklendi
+- Antrenman ve taraftar görsel blokları eklendi
+- Detay modalındaki görsel alan güçlendirildi
+- SVG forma çizimlerine arma/desen detayları eklendi
+- JSON/CMS yapısı korunmuştur
+
+Yükleme:
+- GitHub repo ana dizinine index.html dosyasını yükleyip replace et.
+- Commit changes yap.
+- Netlify deploy Published olunca F5 ile kontrol et.
