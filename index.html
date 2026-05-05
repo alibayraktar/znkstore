@@ -428,7 +428,7 @@ nav{border-top:1px solid var(--line);background:linear-gradient(90deg,var(--gree
     linear-gradient(135deg,#07151f 0%,#003623 50%,#006b44 100%)!important;
 }
 .istanbulSky{position:absolute;inset:0;overflow:hidden;pointer-events:none}
-.bridge{position:absolute;left:0;right:0;bottom:120px;height:150px;opacity:.68}
+.bridge{position:absolute;left:0;right:0;bottom:120px;height:150px;opacity:.18}
 .bridge:before,.bridge:after{content:"";position:absolute;bottom:0;width:52px;height:130px;border:5px solid rgba(255,255,255,.34);border-bottom:0;border-radius:28px 28px 0 0}
 .bridge:before{left:12%}.bridge:after{right:12%}
 .bridgeLine{position:absolute;left:7%;right:7%;bottom:65px;height:3px;background:linear-gradient(90deg,transparent,rgba(255,210,26,.85),rgba(255,255,255,.7),rgba(255,210,26,.85),transparent);box-shadow:0 0 22px rgba(255,210,26,.55)}
@@ -437,7 +437,7 @@ nav{border-top:1px solid var(--line);background:linear-gradient(90deg,var(--gree
 .water:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 55% 30%,rgba(255,210,26,.23),transparent 46%);animation:waterGlow 5s ease-in-out infinite}
 @keyframes waterGlow{50%{opacity:.55}}
 .cityLine{position:absolute;left:0;right:0;bottom:150px;height:90px;background:linear-gradient(to top,rgba(0,0,0,.46),transparent),linear-gradient(90deg,transparent 0 5%,rgba(0,0,0,.42) 5% 8%,transparent 8% 12%,rgba(0,0,0,.40) 12% 15%,transparent 15% 23%,rgba(0,0,0,.46) 23% 27%,transparent 27% 33%,rgba(0,0,0,.44) 33% 38%,transparent 38% 46%,rgba(0,0,0,.48) 46% 51%,transparent 51% 61%,rgba(0,0,0,.42) 61% 65%,transparent 65% 72%,rgba(0,0,0,.46) 72% 77%,transparent 77% 86%,rgba(0,0,0,.44) 86% 91%,transparent 91%);opacity:.62}
-.ferry{position:absolute;bottom:74px;left:-180px;width:170px;height:58px;animation:ferryMove 24s linear infinite;opacity:.86}
+.ferry{position:absolute;bottom:74px;left:-180px;width:170px;height:58px;animation:ferryMove 24s linear infinite;opacity:.25}
 .ferryBody{position:absolute;bottom:0;width:170px;height:27px;background:rgba(255,255,255,.90);border-radius:8px 28px 12px 18px}
 .ferryBody:after{content:"";position:absolute;left:20px;right:20px;bottom:-7px;height:7px;border-radius:50%;background:rgba(0,0,0,.35);filter:blur(3px)}
 .ferryTop{position:absolute;left:32px;bottom:24px;width:92px;height:25px;background:rgba(255,255,255,.78);border-radius:12px 12px 3px 3px}
@@ -473,6 +473,164 @@ nav{border-top:1px solid var(--line);background:linear-gradient(90deg,var(--gree
 .bosphorusCard:before{content:"";position:absolute;left:0;right:0;bottom:0;height:80px;background:repeating-linear-gradient(175deg,rgba(255,255,255,.10) 0 2px,transparent 2px 28px)}
 @media(max-width:1050px){.istanbulEdition{grid-template-columns:1fr}.bosphorusCards{grid-template-columns:1fr}}
 @media(max-width:620px){.editionContent h2{font-size:38px}.editionKit{width:250px}.bridge{bottom:108px}}
+
+
+/* ISTANBUL VISUAL PLUS - Daha temsilî köprü, vapur, Boğaz ve silüet */
+.bosphorusIllustration{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:0;
+}
+.bosphorusMoon{
+  position:absolute;
+  right:11%;
+  top:56px;
+  width:86px;
+  height:86px;
+  border-radius:50%;
+  background:radial-gradient(circle,#fff7c8 0 38%,rgba(255,210,26,.65) 39% 58%,rgba(255,210,26,.10) 59% 100%);
+  box-shadow:0 0 58px rgba(255,210,26,.55);
+  opacity:.85;
+}
+.mosqueSilhouette{
+  position:absolute;
+  left:7%;
+  bottom:158px;
+  width:330px;
+  height:125px;
+  opacity:.46;
+}
+.mosqueBase{
+  position:absolute;
+  left:38px;
+  bottom:0;
+  width:190px;
+  height:48px;
+  background:rgba(0,0,0,.55);
+  border-radius:8px 8px 0 0;
+}
+.dome{
+  position:absolute;
+  left:82px;
+  bottom:42px;
+  width:104px;
+  height:62px;
+  background:rgba(0,0,0,.56);
+  border-radius:90px 90px 0 0;
+}
+.smallDome{
+  position:absolute;
+  bottom:42px;
+  width:48px;
+  height:34px;
+  background:rgba(0,0,0,.50);
+  border-radius:50px 50px 0 0;
+}
+.sd1{left:38px}.sd2{left:182px}
+.minaret{
+  position:absolute;
+  bottom:0;
+  width:12px;
+  height:120px;
+  background:rgba(0,0,0,.58);
+  border-radius:8px 8px 0 0;
+}
+.minaret:before{
+  content:"";
+  position:absolute;
+  left:-5px;
+  top:20px;
+  width:22px;
+  height:4px;
+  background:rgba(0,0,0,.62);
+  border-radius:999px;
+}
+.minaret:after{
+  content:"";
+  position:absolute;
+  left:1px;
+  top:-18px;
+  width:10px;
+  height:24px;
+  background:rgba(0,0,0,.55);
+  clip-path:polygon(50% 0,100% 100%,0 100%);
+}
+.m1{left:14px}.m2{left:250px}
+
+.istanbulBridgeSvg{
+  position:absolute;
+  left:50%;
+  bottom:106px;
+  transform:translateX(-50%);
+  width:min(980px,102vw);
+  height:245px;
+  opacity:.82;
+}
+.istanbulBridgeSvg svg{
+  width:100%;
+  height:100%;
+  overflow:visible;
+}
+.bridgeGlow{
+  filter:drop-shadow(0 0 12px rgba(255,210,26,.55));
+}
+
+.bigFerry{
+  position:absolute;
+  left:-280px;
+  bottom:68px;
+  width:250px;
+  height:106px;
+  animation:bigFerryMove 32s linear infinite;
+  opacity:.95;
+  filter:drop-shadow(0 14px 12px rgba(0,0,0,.35));
+}
+.bigFerry svg{width:100%;height:100%}
+@keyframes bigFerryMove{
+  from{transform:translateX(0)}
+  to{transform:translateX(calc(100vw + 540px))}
+}
+.ferryWake{
+  position:absolute;
+  left:-260px;
+  bottom:58px;
+  width:210px;
+  height:24px;
+  background:repeating-linear-gradient(175deg,rgba(255,255,255,.35) 0 3px,transparent 3px 18px);
+  border-radius:50%;
+  filter:blur(1px);
+  animation:bigFerryMove 32s linear infinite;
+  opacity:.55;
+}
+.heroInner{z-index:2}
+.visualStage{z-index:2}
+.istanbulHero .water{
+  background:
+    radial-gradient(ellipse at 55% 25%,rgba(255,210,26,.18),transparent 43%),
+    repeating-linear-gradient(174deg,rgba(255,255,255,.14) 0 2px,transparent 2px 28px),
+    repeating-linear-gradient(184deg,rgba(0,150,95,.16) 0 2px,transparent 2px 42px),
+    linear-gradient(180deg,rgba(0,95,80,.45),rgba(3,19,28,.88))!important;
+}
+.istanbulHero .cityLine{
+  opacity:.78!important;
+}
+.visualStage .shirtShow{
+  z-index:3;
+}
+.visualStage .halo{
+  z-index:1;
+}
+.istanbulHero .sceneFloor{
+  z-index:1;
+}
+@media(max-width:700px){
+  .mosqueSilhouette{left:-18%;transform:scale(.78);bottom:146px}
+  .bosphorusMoon{right:7%;top:70px;width:60px;height:60px}
+  .istanbulBridgeSvg{bottom:105px;width:130vw}
+  .bigFerry{width:190px;bottom:72px}
+}
 
 </style>
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
