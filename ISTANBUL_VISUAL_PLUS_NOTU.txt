@@ -1,0 +1,14 @@
+ZNKSPOR Istanbul Visual Plus
+
+Bu paket temsilî görselleri güçlendirir:
+- Daha belirgin Boğaz Köprüsü SVG çizimi
+- Daha büyük ve detaylı vapur SVG çizimi
+- Camii/İstanbul silüeti
+- Ay/ışık efekti
+- Daha hareketli Boğaz suyu
+- Mevcut JSON/CMS yapısı korunur
+
+Yükleme:
+GitHub repo ana dizinine index.html dosyasını yükleyip mevcut dosya ile değiştir.
+Commit changes yap.
+Netlify deploy Published olunca F5 ile kontrol et.
