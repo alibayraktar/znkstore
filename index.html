@@ -632,6 +632,126 @@ nav{border-top:1px solid var(--line);background:linear-gradient(90deg,var(--gree
   .bigFerry{width:190px;bottom:72px}
 }
 
+
+/* ISTANBUL HARD FIX - görünür sahne objeleri */
+.hero.istanbulHero{
+  position:relative!important;
+  overflow:hidden!important;
+}
+.istanbulHardScene{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  overflow:hidden;
+}
+.heroInner{
+  position:relative;
+  z-index:5!important;
+}
+.hardMoon{
+  position:absolute;
+  right:8%;
+  top:52px;
+  width:86px;
+  height:86px;
+  border-radius:50%;
+  background:#fff3a6;
+  box-shadow:0 0 70px rgba(255,210,26,.95);
+  opacity:.95;
+}
+.hardWater{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:155px;
+  background:
+    repeating-linear-gradient(175deg,rgba(255,255,255,.28) 0 2px,transparent 2px 30px),
+    linear-gradient(180deg,rgba(0,104,92,.76),rgba(0,18,30,.96));
+  z-index:1;
+}
+.hardBridge{
+  position:absolute;
+  left:50%;
+  bottom:82px;
+  transform:translateX(-50%);
+  width:min(1120px,118vw);
+  height:260px;
+  z-index:2;
+  opacity:.92;
+  filter:drop-shadow(0 0 18px rgba(255,210,26,.38));
+}
+.hardBridge svg{
+  width:100%;
+  height:100%;
+  overflow:visible;
+}
+.hardMosque{
+  position:absolute;
+  left:4%;
+  bottom:145px;
+  width:330px;
+  height:160px;
+  z-index:2;
+  opacity:.78;
+}
+.hardMosque svg{
+  width:100%;
+  height:100%;
+  filter:drop-shadow(0 10px 12px rgba(0,0,0,.35));
+}
+.hardFerry{
+  position:absolute;
+  bottom:58px;
+  left:-260px;
+  width:250px;
+  height:110px;
+  z-index:4;
+  animation:hardFerryMove 18s linear infinite;
+  filter:drop-shadow(0 18px 14px rgba(0,0,0,.50));
+}
+.hardFerry svg{
+  width:100%;
+  height:100%;
+}
+@keyframes hardFerryMove{
+  from{transform:translateX(0)}
+  to{transform:translateX(calc(100vw + 540px))}
+}
+.hardGull{
+  position:absolute;
+  width:54px;
+  height:26px;
+  z-index:3;
+  opacity:.9;
+  animation:hardGullFloat 7s ease-in-out infinite;
+}
+.hardGull:before,.hardGull:after{
+  content:"";
+  position:absolute;
+  top:12px;
+  width:28px;
+  height:12px;
+  border-top:4px solid rgba(255,255,255,.95);
+  border-radius:50%;
+}
+.hardGull:before{left:0;transform:rotate(18deg)}
+.hardGull:after{right:0;transform:rotate(-18deg)}
+.hg1{left:17%;top:78px}
+.hg2{left:39%;top:142px;transform:scale(.72);animation-delay:1s}
+.hg3{right:20%;top:98px;transform:scale(.85);animation-delay:2s}
+@keyframes hardGullFloat{
+  0%,100%{margin-top:0}
+  50%{margin-top:-16px}
+}
+@media(max-width:700px){
+  .hardBridge{bottom:86px;width:145vw}
+  .hardMosque{left:-70px;bottom:138px;transform:scale(.75)}
+  .hardFerry{width:190px;bottom:62px}
+  .hardMoon{width:58px;height:58px}
+}
+
 </style>
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
@@ -642,28 +762,7 @@ nav{border-top:1px solid var(--line);background:linear-gradient(90deg,var(--gree
 <nav><div class="nav"><button class="active" data-page="home" onclick="showPage('home')">ANA SAYFA</button><button data-page="forma" onclick="showPage('forma')">FORMA</button><button data-page="erkek" onclick="showPage('erkek')">ERKEK</button><button data-page="kadin" onclick="showPage('kadin')">KADIN</button><button data-page="cocuk" onclick="showPage('cocuk')">ÇOCUK</button><button data-page="aksesuar" onclick="showPage('aksesuar')">AKSESUAR</button><button data-page="kampanya" onclick="showPage('kampanya')">KAMPANYALAR</button><button data-page="magaza" onclick="showPage('magaza')">MAĞAZALAR</button></div></nav>
 </header>
 <main>
-<section id="home" class="page active"><div class="hero istanbulHero"><div style="position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden">
-
-  <!-- AY -->
-  <div style="position:absolute;right:10%;top:60px;width:80px;height:80px;border-radius:50%;background:#fff7c8;box-shadow:0 0 60px #ffd21a;"></div>
-
-  <!-- CAMİ -->
-  <div style="position:absolute;left:5%;bottom:140px;width:220px;height:100px;background:rgba(0,0,0,.5);border-radius:10px"></div>
-
-  <!-- SU -->
-  <div style="position:absolute;bottom:0;width:100%;height:140px;background:linear-gradient(#003,#000)"></div>
-
-  <!-- VAPUR -->
-  <div style="position:absolute;bottom:70px;left:-200px;width:120px;height:30px;background:white;border-radius:10px;animation:vapur 20s linear infinite"></div>
-
-</div>
-
-<style>
-@keyframes vapur{
-  from{transform:translateX(0)}
-  to{transform:translateX(120vw)}
-}
-</style><div class="heroInner"><div><div class="istanbulLabel">İSTANBUL EDITION • BOĞAZ KOLEKSİYONU</div><h1>Boğaz’dan tribüne uzanan yeşil-sarı hikaye.</h1><p>Vapur, martı, köprü ışıkları ve İstanbul akşamı atmosferiyle ZNKSPOR mağazası artık sadece ürün listelemiyor; marka hikayesi anlatıyor.</p><div class="ctaRow"><button class="btn btnYellow" onclick="showPage('forma')">Formaları İncele →</button><button class="btn btnGhost" onclick="showPage('kampanya')">Kampanyalara Git</button></div><div class="heroStats"><div class="stat"><strong id="productCount">0</strong><span>Ürün</span></div><div class="stat"><strong>JSON</strong><span>Ürün kaynağı</span></div><div class="stat"><strong>Local</strong><span>Kalıcı sepet</span></div></div></div><div class="visualStage"><div class="halo"></div><div class="sceneFloor"></div><div class="shirtShow" id="heroShirt"></div><div class="floatCard f1">Yeni Yapı</div><div class="floatCard f2">Kolay Güncelleme</div><div class="floatCard f3">Admin Demo</div></div></div></div>
+<section id="home" class="page active"><div class="hero istanbulHero"><div class="heroInner"><div><div class="istanbulLabel">İSTANBUL EDITION • BOĞAZ KOLEKSİYONU</div><h1>Boğaz’dan tribüne uzanan yeşil-sarı hikaye.</h1><p>Vapur, martı, köprü ışıkları ve İstanbul akşamı atmosferiyle ZNKSPOR mağazası artık sadece ürün listelemiyor; marka hikayesi anlatıyor.</p><div class="ctaRow"><button class="btn btnYellow" onclick="showPage('forma')">Formaları İncele →</button><button class="btn btnGhost" onclick="showPage('kampanya')">Kampanyalara Git</button></div><div class="heroStats"><div class="stat"><strong id="productCount">0</strong><span>Ürün</span></div><div class="stat"><strong>JSON</strong><span>Ürün kaynağı</span></div><div class="stat"><strong>Local</strong><span>Kalıcı sepet</span></div></div></div><div class="visualStage"><div class="halo"></div><div class="sceneFloor"></div><div class="shirtShow" id="heroShirt"></div><div class="floatCard f1">Yeni Yapı</div><div class="floatCard f2">Kolay Güncelleme</div><div class="floatCard f3">Admin Demo</div></div></div></div>
 
 <div class="wrap">
   <div class="istanbulEdition">

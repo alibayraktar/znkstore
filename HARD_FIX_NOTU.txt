@@ -1,0 +1,9 @@
+ZNKSPOR Istanbul Hard Fix
+
+Bu paket, köprü/vapur/cami sahnesini yüksek kontrastlı ve görünür hale getirir.
+Eğer önceki sürümde sadece ay/güneş görünüyorsa bunu yükle.
+
+Yükleme:
+GitHub repo ana dizinine index.html dosyasını yükleyip replace et.
+Commit changes yap.
+Netlify deploy Published olunca F5 ile kontrol et.
