@@ -1,0 +1,13 @@
+ZNKSPOR CMS yükseltmesi
+
+Bu klasörü GitHub repo köküne yükleyip commit ettiğinde /admin gerçek Decap CMS paneline dönüşür.
+
+Netlify tarafında açılacaklar:
+1) Site configuration > Identity > Enable Identity
+2) Registration preferences > Invite only
+3) Site configuration > Identity > Services > Git Gateway > Enable Git Gateway
+4) Identity > Invite users > kendi mailini davet et
+5) Davet mailinden şifre oluştur
+6) /admin adresine gir
+
+Admin panelde ürünleri kaydedince GitHub data/products.json dosyası güncellenir ve Netlify otomatik deploy eder.

@@ -1,42 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZNKSPOR Admin Demo</title>
-<style>
-body{margin:0;font-family:Arial,sans-serif;background:#f4f5ef;color:#151515}.top{background:#003623;color:white;padding:18px 24px}.wrap{max-width:1180px;margin:auto;padding:24px}.card{background:white;border:1px solid #ddd;border-radius:20px;padding:18px;margin-bottom:16px;box-shadow:0 10px 30px rgba(0,0,0,.08)}input,select,textarea{width:100%;padding:11px;border:1px solid #ddd;border-radius:12px;margin-top:6px}label{font-weight:800;font-size:13px}button{border:0;border-radius:999px;padding:12px 18px;font-weight:900;cursor:pointer}.green{background:#005f3c;color:white}.yellow{background:#ffd21a;color:#003623}.danger{background:#b00020;color:white}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.full{grid-column:1/-1}.actions{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.item{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center}.muted{color:#666}@media(max-width:800px){.grid{grid-template-columns:1fr}.item{grid-template-columns:1fr}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZNKSPOR Admin Panel</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-<div class="top"><h1>ZNKSPOR Admin Demo</h1><p>Bu panel ürünleri düzenleyip yeni products.json indirmen için hazırlandı. Netlify Drop yapısında doğrudan sunucudaki dosyayı kaydedemez; indirdiğin JSON'u data/products.json ile değiştirip tekrar deploy etmen gerekir.</p></div>
-<div class="wrap">
-<div class="card">
-<h2>Ürün Ekle / Düzenle</h2>
-<div class="grid">
-<div><label>ID</label><input id="id" type="number"></div>
-<div><label>Kategori</label><select id="cat"><option>Forma</option><option>Erkek</option><option>Kadın</option><option>Çocuk</option><option>Aksesuar</option><option>Kampanya</option></select></div>
-<div><label>Rozet</label><input id="badge" placeholder="Yeni, Fırsat..."></div>
-<div><label>Görsel Tipi</label><select id="type"><option>jersey1</option><option>jersey2</option><option>jersey3</option><option>jersey4</option><option>shirt1</option><option>shirt2</option><option>tracksuit</option><option>hoodie</option><option>hoodie2</option><option>pants</option><option>kids</option><option>hoodieKids</option><option>scarf</option><option>beanie</option><option>mug</option></select></div>
-<div class="full"><label>Ürün Adı</label><input id="name"></div>
-<div><label>Fiyat</label><input id="price" type="number" step="0.01"></div>
-<div><label>Eski Fiyat</label><input id="old" type="number" step="0.01"></div>
-<div class="full"><label>Açıklama</label><textarea id="desc" rows="3"></textarea></div>
-</div>
-<div class="actions"><button class="green" onclick="saveProduct()">Kaydet / Güncelle</button><button class="yellow" onclick="clearForm()">Temizle</button><button class="yellow" onclick="downloadJson()">products.json indir</button><button class="green" onclick="location.href='/'">Siteye Dön</button></div>
-</div>
-<div class="card"><h2>Ürün Listesi</h2><p class="muted">Düzenlemek için ürüne tıkla.</p><div id="list"></div></div>
-</div>
-<script>
-let products=[];
-async function load(){const r=await fetch("../data/products.json?v="+Date.now());products=await r.json();render()}
-function render(){document.getElementById("list").innerHTML=products.map(p=>`<div class="card item"><div onclick="edit(${p.id})"><strong>${p.id} - ${p.name}</strong><div class="muted">${p.cat} | ${p.badge} | ${p.price} TL</div></div><button class="danger" onclick="del(${p.id})">Sil</button></div>`).join("")}
-function val(id){return document.getElementById(id).value}
-function set(id,v){document.getElementById(id).value=v??""}
-function edit(id){const p=products.find(x=>x.id===id);if(!p)return;["id","cat","badge","type","name","price","old","desc"].forEach(k=>set(k,p[k]));scrollTo({top:0,behavior:"smooth"})}
-function clearForm(){["id","badge","name","price","old","desc"].forEach(k=>set(k,""));set("cat","Forma");set("type","jersey1")}
-function saveProduct(){let p={id:Number(val("id"))||Date.now(),name:val("name"),price:Number(val("price")),old:Number(val("old")),cat:val("cat"),badge:val("badge"),type:val("type"),desc:val("desc")};if(!p.name){alert("Ürün adı boş olamaz");return}let i=products.findIndex(x=>x.id===p.id);if(i>=0)products[i]=p;else products.push(p);render();clearForm()}
-function del(id){products=products.filter(p=>p.id!==id);render()}
-function downloadJson(){const blob=new Blob([JSON.stringify(products,null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="products.json";a.click();URL.revokeObjectURL(a.href)}
-load();
-</script>
-</body></html>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: false
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "store"
+    label: "Mağaza Yönetimi"
+    files:
+      - name: "products"
+        label: "Ürünler"
+        file: "data/products.json"
+        fields:
+          - label: "Ürün Listesi"
+            name: "products"
+            widget: "list"
+            summary: "{{fields.name}} - {{fields.cat}} - {{fields.price}} TL"
+            fields:
+              - { label: "ID", name: "id", widget: "number", value_type: "int" }
+              - { label: "Ürün Adı", name: "name", widget: "string" }
+              - { label: "Fiyat", name: "price", widget: "number", value_type: "float" }
+              - { label: "Eski Fiyat", name: "old", widget: "number", value_type: "float", required: false }
+              - label: "Kategori"
+                name: "cat"
+                widget: "select"
+                options: ["Forma", "Erkek", "Kadın", "Çocuk", "Aksesuar", "Kampanya"]
+              - { label: "Rozet", name: "badge", widget: "string", required: false }
+              - label: "Görsel Tipi"
+                name: "type"
+                widget: "select"
+                options: ["jersey1", "jersey2", "jersey3", "jersey4", "shirt1", "shirt2", "tracksuit", "hoodie", "hoodie2", "pants", "kids", "hoodieKids", "scarf", "beanie", "mug"]
+              - { label: "Açıklama", name: "desc", widget: "text" }
