@@ -1,0 +1,15 @@
+ZNKSPOR Istanbul Edition
+
+Eklenenler:
+- Ana sayfa hero arka planına İstanbul Boğazı atmosferi
+- Köprü silüeti, şehir çizgisi, su efekti
+- Hareketli vapur ve martılar
+- İstanbul Edition özel koleksiyon bannerı
+- Boğaz Koleksiyonu kartları
+- Yeşil-sarı ışık ve kampanya havası
+- JSON/CMS yapısı korunmuştur
+
+Yükleme:
+GitHub repo ana dizinine index.html dosyasını yükle ve mevcut dosya ile değiştir.
+Commit changes yap.
+Netlify deploy Published olunca F5 ile kontrol et.

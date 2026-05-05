@@ -418,6 +418,62 @@ nav{border-top:1px solid var(--line);background:linear-gradient(90deg,var(--gree
   .stageArt{position:relative;right:auto;bottom:auto;margin-top:20px;width:min(320px,90%)}
 }
 
+
+/* ISTANBUL EDITION - Boğaz, vapur, köprü atmosferi */
+.hero.istanbulHero{
+  background:
+    linear-gradient(180deg,rgba(4,18,23,.10),rgba(4,18,23,.35)),
+    radial-gradient(circle at 75% 18%,rgba(255,210,26,.48),transparent 26%),
+    radial-gradient(circle at 25% 84%,rgba(0,150,95,.50),transparent 32%),
+    linear-gradient(135deg,#07151f 0%,#003623 50%,#006b44 100%)!important;
+}
+.istanbulSky{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.bridge{position:absolute;left:0;right:0;bottom:120px;height:150px;opacity:.68}
+.bridge:before,.bridge:after{content:"";position:absolute;bottom:0;width:52px;height:130px;border:5px solid rgba(255,255,255,.34);border-bottom:0;border-radius:28px 28px 0 0}
+.bridge:before{left:12%}.bridge:after{right:12%}
+.bridgeLine{position:absolute;left:7%;right:7%;bottom:65px;height:3px;background:linear-gradient(90deg,transparent,rgba(255,210,26,.85),rgba(255,255,255,.7),rgba(255,210,26,.85),transparent);box-shadow:0 0 22px rgba(255,210,26,.55)}
+.bridgeCable{position:absolute;left:12%;right:12%;bottom:65px;height:105px;border-top:2px solid rgba(255,255,255,.20);border-radius:50% 50% 0 0}
+.water{position:absolute;left:0;right:0;bottom:0;height:165px;background:repeating-linear-gradient(175deg,rgba(255,255,255,.10) 0 2px,transparent 2px 36px),linear-gradient(180deg,rgba(0,95,80,.35),rgba(3,19,28,.84))}
+.water:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 55% 30%,rgba(255,210,26,.23),transparent 46%);animation:waterGlow 5s ease-in-out infinite}
+@keyframes waterGlow{50%{opacity:.55}}
+.cityLine{position:absolute;left:0;right:0;bottom:150px;height:90px;background:linear-gradient(to top,rgba(0,0,0,.46),transparent),linear-gradient(90deg,transparent 0 5%,rgba(0,0,0,.42) 5% 8%,transparent 8% 12%,rgba(0,0,0,.40) 12% 15%,transparent 15% 23%,rgba(0,0,0,.46) 23% 27%,transparent 27% 33%,rgba(0,0,0,.44) 33% 38%,transparent 38% 46%,rgba(0,0,0,.48) 46% 51%,transparent 51% 61%,rgba(0,0,0,.42) 61% 65%,transparent 65% 72%,rgba(0,0,0,.46) 72% 77%,transparent 77% 86%,rgba(0,0,0,.44) 86% 91%,transparent 91%);opacity:.62}
+.ferry{position:absolute;bottom:74px;left:-180px;width:170px;height:58px;animation:ferryMove 24s linear infinite;opacity:.86}
+.ferryBody{position:absolute;bottom:0;width:170px;height:27px;background:rgba(255,255,255,.90);border-radius:8px 28px 12px 18px}
+.ferryBody:after{content:"";position:absolute;left:20px;right:20px;bottom:-7px;height:7px;border-radius:50%;background:rgba(0,0,0,.35);filter:blur(3px)}
+.ferryTop{position:absolute;left:32px;bottom:24px;width:92px;height:25px;background:rgba(255,255,255,.78);border-radius:12px 12px 3px 3px}
+.ferryTop:before{content:"";position:absolute;left:13px;top:7px;width:12px;height:7px;background:#006b44;box-shadow:22px 0 #006b44,44px 0 #006b44}
+.ferryFlag{position:absolute;right:31px;bottom:42px;width:23px;height:13px;background:var(--yellow);border-radius:2px;box-shadow:0 0 12px rgba(255,210,26,.55)}
+@keyframes ferryMove{from{transform:translateX(0)}to{transform:translateX(calc(100vw + 360px))}}
+.seagull{position:absolute;width:42px;height:18px;opacity:.72;animation:gullFloat 9s ease-in-out infinite}
+.seagull:before,.seagull:after{content:"";position:absolute;top:8px;width:22px;height:10px;border-top:3px solid rgba(255,255,255,.85);border-radius:50%}
+.seagull:before{left:0;transform:rotate(18deg)}.seagull:after{right:0;transform:rotate(-18deg)}
+.g1{top:90px;left:18%;animation-delay:0s}.g2{top:138px;left:42%;transform:scale(.72);animation-delay:1.2s}.g3{top:76px;right:17%;transform:scale(.88);animation-delay:2.1s}
+@keyframes gullFloat{0%,100%{transform:translateY(0) translateX(0)}50%{transform:translateY(-12px) translateX(20px)}}
+.istanbulLabel{display:inline-flex;align-items:center;gap:8px;background:rgba(255,210,26,.16);border:1px solid rgba(255,210,26,.35);color:#fff7c8;padding:9px 13px;border-radius:999px;font-size:13px;font-weight:1000}
+.istanbulEdition{min-height:390px;border-radius:38px;padding:34px;color:white;position:relative;overflow:hidden;box-shadow:var(--shadow);background:radial-gradient(circle at 78% 28%,rgba(255,210,26,.40),transparent 30%),linear-gradient(135deg,#07151f,#003623 58%,#006b44);display:grid;grid-template-columns:1fr .95fr;align-items:center;gap:28px}
+.istanbulEdition:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 0 55%,rgba(0,0,0,.38) 100%),repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 1px,transparent 1px 85px)}
+.editionContent,.editionVisual{position:relative;z-index:1}
+.editionContent h2{font-size:52px;line-height:.98;letter-spacing:-2px;margin:14px 0}
+.editionContent p{color:#e7fff5;line-height:1.6;font-size:17px;max-width:620px}
+.editionScene{min-height:320px;position:relative;display:grid;place-items:center}
+.editionScene .miniBridge{position:absolute;left:0;right:0;bottom:36px;height:80px;opacity:.55}
+.editionScene .miniBridge:before{content:"";position:absolute;left:5%;right:5%;bottom:34px;height:3px;background:linear-gradient(90deg,transparent,var(--yellow),white,var(--yellow),transparent);box-shadow:0 0 18px rgba(255,210,26,.5)}
+.editionScene .miniWater{position:absolute;left:0;right:0;bottom:0;height:76px;border-radius:0 0 28px 28px;background:repeating-linear-gradient(175deg,rgba(255,255,255,.11) 0 2px,transparent 2px 30px),linear-gradient(180deg,rgba(0,95,80,.35),rgba(3,19,28,.82))}
+.editionKit{width:320px;filter:drop-shadow(0 35px 24px rgba(0,0,0,.38));transform:rotate(-5deg);z-index:2}
+.editionKit svg{width:100%}
+.bosphorusCards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.bosphorusCard{min-height:260px;border-radius:32px;padding:24px;color:white;position:relative;overflow:hidden;box-shadow:var(--soft);cursor:pointer}
+.bosphorusCard:nth-child(1){background:linear-gradient(135deg,#07151f,#006b44)}
+.bosphorusCard:nth-child(2){background:linear-gradient(135deg,#111,#003623)}
+.bosphorusCard:nth-child(3){background:linear-gradient(135deg,var(--yellow),#fff4aa);color:var(--green3)}
+.bosphorusCard h3{font-size:30px;margin:0 0 8px;letter-spacing:-1px}
+.bosphorusCard p{font-weight:800;opacity:.82;line-height:1.5;max-width:310px}
+.bosphorusCard .cardArt{position:absolute;right:-12px;bottom:-30px;width:190px;filter:drop-shadow(0 20px 14px rgba(0,0,0,.25))}
+.bosphorusCard .cardArt svg{width:100%}
+.bosphorusCard:before{content:"";position:absolute;left:0;right:0;bottom:0;height:80px;background:repeating-linear-gradient(175deg,rgba(255,255,255,.10) 0 2px,transparent 2px 28px)}
+@media(max-width:1050px){.istanbulEdition{grid-template-columns:1fr}.bosphorusCards{grid-template-columns:1fr}}
+@media(max-width:620px){.editionContent h2{font-size:38px}.editionKit{width:250px}.bridge{bottom:108px}}
+
 </style>
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
@@ -428,7 +484,55 @@ nav{border-top:1px solid var(--line);background:linear-gradient(90deg,var(--gree
 <nav><div class="nav"><button class="active" data-page="home" onclick="showPage('home')">ANA SAYFA</button><button data-page="forma" onclick="showPage('forma')">FORMA</button><button data-page="erkek" onclick="showPage('erkek')">ERKEK</button><button data-page="kadin" onclick="showPage('kadin')">KADIN</button><button data-page="cocuk" onclick="showPage('cocuk')">ÇOCUK</button><button data-page="aksesuar" onclick="showPage('aksesuar')">AKSESUAR</button><button data-page="kampanya" onclick="showPage('kampanya')">KAMPANYALAR</button><button data-page="magaza" onclick="showPage('magaza')">MAĞAZALAR</button></div></nav>
 </header>
 <main>
-<section id="home" class="page active"><div class="hero"><div class="heroInner"><div><div class="eyebrow">ZNKSPOR 2026 ELITE COLLECTION</div><h1>Ürün yönetimi artık daha kolay.</h1><p>Bu sürümde ürünler ayrı JSON dosyasından okunur. Ürün/fiyat/kategori güncellemesi için artık HTML koduna gömülü listeyle uğraşmayacağız.</p><div class="ctaRow"><button class="btn btnYellow" onclick="showPage('forma')">Formaları İncele →</button><button class="btn btnGhost" onclick="showPage('kampanya')">Kampanyalara Git</button></div><div class="heroStats"><div class="stat"><strong id="productCount">0</strong><span>Ürün</span></div><div class="stat"><strong>JSON</strong><span>Ürün kaynağı</span></div><div class="stat"><strong>Local</strong><span>Kalıcı sepet</span></div></div></div><div class="visualStage"><div class="halo"></div><div class="sceneFloor"></div><div class="shirtShow" id="heroShirt"></div><div class="floatCard f1">Yeni Yapı</div><div class="floatCard f2">Kolay Güncelleme</div><div class="floatCard f3">Admin Demo</div></div></div></div>
+<section id="home" class="page active"><div class="hero istanbulHero"><div class="heroInner"><div><div class="istanbulLabel">İSTANBUL EDITION • BOĞAZ KOLEKSİYONU</div><h1>Boğaz’dan tribüne uzanan yeşil-sarı hikaye.</h1><p>Vapur, martı, köprü ışıkları ve İstanbul akşamı atmosferiyle ZNKSPOR mağazası artık sadece ürün listelemiyor; marka hikayesi anlatıyor.</p><div class="ctaRow"><button class="btn btnYellow" onclick="showPage('forma')">Formaları İncele →</button><button class="btn btnGhost" onclick="showPage('kampanya')">Kampanyalara Git</button></div><div class="heroStats"><div class="stat"><strong id="productCount">0</strong><span>Ürün</span></div><div class="stat"><strong>JSON</strong><span>Ürün kaynağı</span></div><div class="stat"><strong>Local</strong><span>Kalıcı sepet</span></div></div></div><div class="visualStage"><div class="halo"></div><div class="sceneFloor"></div><div class="shirtShow" id="heroShirt"></div><div class="floatCard f1">Yeni Yapı</div><div class="floatCard f2">Kolay Güncelleme</div><div class="floatCard f3">Admin Demo</div></div></div></div>
+
+<div class="wrap">
+  <div class="istanbulEdition">
+    <div class="editionContent">
+      <div class="istanbulLabel">LIMITED CONCEPT</div>
+      <h2>İstanbul Edition şimdi vitrinde.</h2>
+      <p>Boğaz ışıkları, vapur silüeti ve maç günü enerjisini taşıyan bu özel alan; siteyi standart e-ticaret görünümünden çıkarıp kampanya odaklı marka deneyimine çeker.</p>
+      <div class="ctaRow">
+        <button class="btn btnYellow" onclick="showPage('forma')">İstanbul Formasını Gör</button>
+        <button class="btn btnGhost" onclick="showPage('aksesuar')">Taraftar Setleri</button>
+      </div>
+    </div>
+    <div class="editionVisual">
+      <div class="editionScene">
+        <div class="miniBridge"></div>
+        <div class="miniWater"></div>
+        <div class="editionKit" id="istanbulKit"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="sectionTitle">
+    <div>
+      <h2>Boğaz Koleksiyonu</h2>
+      <p>İstanbul atmosferini kategori ve kampanya bloklarına taşıyan özel vitrin alanı.</p>
+    </div>
+  </div>
+  <div class="bosphorusCards">
+    <div class="bosphorusCard" onclick="showPage('forma')">
+      <h3>Vapur Forması</h3>
+      <p>Maç gününe giderken İstanbul’un ritmini taşıyan özel forma vitrini.</p>
+      <div class="cardArt" id="bosA"></div>
+    </div>
+    <div class="bosphorusCard" onclick="showPage('erkek')">
+      <h3>Rıhtım Training</h3>
+      <p>Antrenman koleksiyonuna gece şehir ışığı ve sokak enerjisi.</p>
+      <div class="cardArt" id="bosB"></div>
+    </div>
+    <div class="bosphorusCard" onclick="showPage('aksesuar')">
+      <h3>Martı Seti</h3>
+      <p>Atkı, bere ve fan gear ürünleri için güçlü taraftar paketi.</p>
+      <div class="cardArt" id="bosC"></div>
+    </div>
+  </div>
+</div>
+
 <div class="wrap"><div class="promoGrid"><div class="promo big" onclick="showPage('kampanya')"><div><h2>Forma + Atkı Setlerinde Fırsat</h2><p>Seçili ürünlerde sepette ekstra indirim</p></div></div><div class="promo dark" onclick="showPage('cocuk')"><div><h3>Mini Taraftar Koleksiyonu</h3><p>Çocuk forma ve set ürünleri</p></div></div></div></div>
 
 <div class="premiumStrip">
@@ -550,6 +654,9 @@ function art(t){const a={jersey1:`<svg viewBox="0 0 260 300"><path d="M80 28 L11
 function money(v){return Number(v).toLocaleString("tr-TR",{minimumFractionDigits:2,maximumFractionDigits:2})+" TL"}
 function card(p){let liked=fav.includes(p.id)?"active":"";return `<div class="product"><div class="pImg" onclick="openModal(${p.id})"><span class="badge">${p.badge}</span><button class="heart ${liked}" onclick="event.stopPropagation();toggleFav(${p.id})">♥</button>${art(p.type)}<div class="quick"><button>Hızlı İncele</button></div></div><div class="pBody"><div class="pTitle" onclick="openModal(${p.id})">${p.name}</div><div class="meta"><span>★★★★★</span><span>Stokta</span></div><span class="old">${money(p.old)}</span><div class="price"><strong>${money(p.price)}</strong><button class="add" onclick="addCart(${p.id})">Ekle</button></div></div></div>`}
 function render(){document.getElementById("productCount").textContent=products.length+"+";document.getElementById("heroShirt").innerHTML=art("jersey1");document.getElementById("catForma").innerHTML=art("jersey2");document.getElementById("catErkek").innerHTML=art("tracksuit");document.getElementById("catKadin").innerHTML=art("hoodie2");document.getElementById("catAksesuar").innerHTML=art("scarf");
+["istanbulKit","bosA"].forEach(id=>{let el=document.getElementById(id);if(el)el.innerHTML=art("jersey1")});
+["bosB"].forEach(id=>{let el=document.getElementById(id);if(el)el.innerHTML=art("tracksuit")});
+["bosC"].forEach(id=>{let el=document.getElementById(id);if(el)el.innerHTML=art("scarf")});
 ["luxA","editA"].forEach(id=>{let el=document.getElementById(id);if(el)el.innerHTML=art("jersey1")});
 ["luxB"].forEach(id=>{let el=document.getElementById(id);if(el)el.innerHTML=art("jersey2")});
 ["luxC"].forEach(id=>{let el=document.getElementById(id);if(el)el.innerHTML=art("jersey3")});
