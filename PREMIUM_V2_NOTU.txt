@@ -1,0 +1,19 @@
+ZNKSPOR Premium V2
+
+Eklenenler:
+- Premium kayan marka şeridi
+- Büyük koleksiyon vitrini
+- Üçlü forma sahnesi
+- Güven / kargo / stok servis kartları
+- Koleksiyon hikayeleri
+- VIP kampanya barı
+- Daha premium ürün hover efekti
+- CMS / JSON yapısı korunmuştur
+- netlify.toml cache ayarı korunmuştur
+
+Yükleme:
+1) Zip'i çıkar.
+2) İçindeki index.html dosyasını GitHub repo ana dizinine yükle ve mevcut index.html ile değiştir.
+3) netlify.toml varsa yüklemen iyi olur; zaten varsa değişmeden kalabilir.
+4) Commit changes.
+5) Netlify Deploys Published olunca normal site URL'ini aç.

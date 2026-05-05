@@ -1,0 +1,17 @@
+Kalıcı cache çözümü
+
+Bu pakette eklenen ana dosya:
+- netlify.toml
+
+Ne yapar?
+- /data/products.json için cache kapatır.
+- HTML/admin sayfalarının eski sürümde takılmasını engeller.
+- Site URL değişmez: https://znkstore.netlify.app aynı kalır.
+
+GitHub'a yükleme:
+1) Bu zip'i çıkar.
+2) İçindeki netlify.toml dosyasını repo ana dizinine yükle.
+3) Eğer index.html/admin/data dosyaları zaten güncelse sadece netlify.toml yüklemen yeterli.
+4) Commit changes yap.
+5) Netlify Deploys kısmında yeni deploy'un Published olmasını bekle.
+6) Siteyi normal URL ile aç: https://znkstore.netlify.app

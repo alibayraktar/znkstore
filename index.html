@@ -31,6 +31,215 @@ nav{border-top:1px solid var(--line);background:linear-gradient(90deg,var(--gree
 .cartList{display:grid;gap:13px;margin-top:22px}.cartItem{background:white;border:1px solid var(--line);border-radius:22px;padding:14px;display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:center;box-shadow:var(--soft)}.miniArt svg{width:70px;height:70px}.qty{display:flex;gap:8px;align-items:center}.qty button{border:0;background:var(--green);color:white;width:32px;height:32px;border-radius:10px;font-weight:1000}.summary{margin-top:18px;border-radius:28px;padding:22px;background:linear-gradient(135deg,var(--green3),var(--green));color:white;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;box-shadow:var(--shadow)}
 .toast{position:fixed;right:18px;bottom:18px;background:var(--green3);color:white;border-radius:18px;padding:15px 18px;z-index:100;display:none;font-weight:1000;box-shadow:var(--shadow)}footer{margin-top:48px;background:#101010;color:white}.foot{max-width:1320px;margin:auto;padding:44px 22px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:24px}footer p,footer a{color:#cfcfcf;line-height:1.8;font-size:14px;display:block;cursor:pointer}.copy{text-align:center;border-top:1px solid #303030;padding:16px;color:#aaa;font-size:13px}
 @media(max-width:1050px){.head{grid-template-columns:1fr auto}.search{grid-column:1/-1}.heroInner,.detail{grid-template-columns:1fr}.products,.catGrid{grid-template-columns:repeat(2,1fr)}.promoGrid{grid-template-columns:1fr}.foot{grid-template-columns:1fr 1fr}.hero h1{font-size:52px}}@media(max-width:620px){.products,.catGrid,.foot{grid-template-columns:1fr}.hero h1{font-size:40px;letter-spacing:-2px}.heroStats{grid-template-columns:1fr}.cartItem{grid-template-columns:1fr}.wrap{padding:30px 14px}}
+
+/* PREMIUM V2 EKLEMELER */
+.premiumStrip{
+  background:#0d0d0d;
+  color:white;
+  overflow:hidden;
+  border-top:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.marquee{
+  display:flex;
+  gap:38px;
+  width:max-content;
+  padding:13px 0;
+  animation:slideText 26s linear infinite;
+  font-weight:1000;
+  letter-spacing:.2px;
+  white-space:nowrap;
+}
+.marquee span{color:var(--yellow)}
+@keyframes slideText{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+.luxPanel{
+  border-radius:36px;
+  min-height:380px;
+  padding:34px;
+  background:
+    radial-gradient(circle at 78% 22%,rgba(255,210,26,.35),transparent 28%),
+    linear-gradient(135deg,#101010,#003623 58%,#006b3f);
+  color:white;
+  box-shadow:var(--shadow);
+  position:relative;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:1fr .9fr;
+  align-items:center;
+  gap:28px;
+}
+.luxPanel:before{
+  content:"";
+  position:absolute;
+  inset:-60px;
+  background:
+    linear-gradient(120deg,transparent 0 35%,rgba(255,255,255,.08) 35% 36%,transparent 36% 100%),
+    repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0 1px,transparent 1px 90px);
+  transform:rotate(-8deg);
+}
+.luxContent,.luxVisual{position:relative;z-index:1}
+.luxContent h2{
+  font-size:48px;
+  line-height:.98;
+  margin:12px 0 14px;
+  letter-spacing:-2px;
+}
+.luxContent p{color:#eafff6;font-size:17px;line-height:1.6;max-width:620px}
+.luxBadge{
+  display:inline-flex;
+  padding:9px 13px;
+  border-radius:999px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.24);
+  font-weight:1000;
+  font-size:13px;
+}
+.luxVisual{
+  min-height:310px;
+  display:grid;
+  place-items:center;
+}
+.luxVisual .triple{
+  position:relative;
+  width:390px;
+  height:330px;
+}
+.triple .piece{
+  position:absolute;
+  width:220px;
+  height:300px;
+  display:grid;
+  place-items:center;
+  filter:drop-shadow(0 24px 18px rgba(0,0,0,.35));
+}
+.triple .piece svg{width:100%;height:100%}
+.triple .a{left:80px;top:5px;z-index:3}
+.triple .b{left:0;top:42px;transform:rotate(-12deg) scale(.86);opacity:.82;z-index:2}
+.triple .c{right:0;top:42px;transform:rotate(12deg) scale(.86);opacity:.82;z-index:2}
+
+.trustGrid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+.trust{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:26px;
+  padding:22px;
+  box-shadow:var(--soft);
+  position:relative;
+  overflow:hidden;
+}
+.trust:after{
+  content:"";
+  position:absolute;
+  right:-32px;
+  bottom:-32px;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--green),var(--yellow));
+  opacity:.13;
+}
+.trustIcon{
+  width:46px;
+  height:46px;
+  border-radius:16px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,var(--green),var(--green2));
+  color:white;
+  font-size:22px;
+  margin-bottom:13px;
+  box-shadow:0 12px 25px rgba(0,95,60,.23);
+}
+.trust strong{display:block;font-size:19px;margin-bottom:6px}
+.trust span{color:var(--muted);font-weight:700;font-size:14px;line-height:1.5}
+
+.editorialGrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+.editorial{
+  min-height:330px;
+  border-radius:34px;
+  padding:28px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:var(--soft);
+  border:1px solid var(--line);
+  display:flex;
+  align-items:flex-end;
+}
+.editorial.one{background:linear-gradient(135deg,#fff,#fff4b8)}
+.editorial.two{background:linear-gradient(135deg,#0f0f0f,#00412a);color:white}
+.editorial h3{font-size:34px;margin:0 0 10px;letter-spacing:-1px}
+.editorial p{margin:0;color:inherit;opacity:.78;font-weight:800;max-width:430px}
+.editorial .bigArt{
+  position:absolute;
+  right:-18px;
+  top:20px;
+  width:270px;
+  opacity:.96;
+  filter:drop-shadow(0 22px 18px rgba(0,0,0,.20));
+}
+.editorial .bigArt svg{width:100%}
+
+.vipBar{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:30px;
+  box-shadow:var(--soft);
+  padding:24px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:18px;
+  align-items:center;
+}
+.vipBar h3{font-size:28px;margin:0 0 6px}
+.vipBar p{margin:0;color:var(--muted);font-weight:700}
+.pillRow{display:flex;gap:10px;flex-wrap:wrap}
+.pill{
+  padding:10px 13px;
+  border-radius:999px;
+  background:#f4f5ef;
+  border:1px solid var(--line);
+  font-weight:1000;
+  color:var(--green3);
+}
+.product .pImg{
+  background:
+    radial-gradient(circle at 50% 40%,rgba(255,210,26,.38),transparent 34%),
+    radial-gradient(circle at 78% 22%,rgba(0,150,95,.14),transparent 23%),
+    linear-gradient(135deg,#f7f7f0,#fff);
+}
+.product:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(120deg,transparent 0 44%,rgba(255,255,255,.35) 46%,transparent 48% 100%);
+  transform:translateX(-130%);
+  transition:.55s;
+  z-index:1;
+}
+.product:hover:before{transform:translateX(130%)}
+.logoMark{animation:pulseLogo 3.6s ease-in-out infinite}
+@keyframes pulseLogo{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+@media(max-width:1050px){
+  .luxPanel,.editorialGrid,.vipBar{grid-template-columns:1fr}
+  .trustGrid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:620px){
+  .luxContent h2{font-size:36px}
+  .trustGrid{grid-template-columns:1fr}
+  .triple .piece{width:190px}
+  .triple .a{left:58px}
+}
+
 </style>
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
@@ -43,6 +252,77 @@ nav{border-top:1px solid var(--line);background:linear-gradient(90deg,var(--gree
 <main>
 <section id="home" class="page active"><div class="hero"><div class="heroInner"><div><div class="eyebrow">ZNKSPOR 2026 ELITE COLLECTION</div><h1>Ürün yönetimi artık daha kolay.</h1><p>Bu sürümde ürünler ayrı JSON dosyasından okunur. Ürün/fiyat/kategori güncellemesi için artık HTML koduna gömülü listeyle uğraşmayacağız.</p><div class="ctaRow"><button class="btn btnYellow" onclick="showPage('forma')">Formaları İncele →</button><button class="btn btnGhost" onclick="showPage('kampanya')">Kampanyalara Git</button></div><div class="heroStats"><div class="stat"><strong id="productCount">0</strong><span>Ürün</span></div><div class="stat"><strong>JSON</strong><span>Ürün kaynağı</span></div><div class="stat"><strong>Local</strong><span>Kalıcı sepet</span></div></div></div><div class="visualStage"><div class="halo"></div><div class="shirtShow" id="heroShirt"></div><div class="floatCard f1">Yeni Yapı</div><div class="floatCard f2">Kolay Güncelleme</div><div class="floatCard f3">Admin Demo</div></div></div></div>
 <div class="wrap"><div class="promoGrid"><div class="promo big" onclick="showPage('kampanya')"><div><h2>Forma + Atkı Setlerinde Fırsat</h2><p>Seçili ürünlerde sepette ekstra indirim</p></div></div><div class="promo dark" onclick="showPage('cocuk')"><div><h3>Mini Taraftar Koleksiyonu</h3><p>Çocuk forma ve set ürünleri</p></div></div></div></div>
+
+<div class="premiumStrip">
+  <div class="marquee">
+    <div>ZNKSPOR ELITE COLLECTION <span>•</span> YENİ SEZON FORMALARI <span>•</span> TARAFTAR SETLERİ <span>•</span> HIZLI KARGO <span>•</span> PREMIUM MAĞAZA DENEYİMİ <span>•</span></div>
+    <div>ZNKSPOR ELITE COLLECTION <span>•</span> YENİ SEZON FORMALARI <span>•</span> TARAFTAR SETLERİ <span>•</span> HIZLI KARGO <span>•</span> PREMIUM MAĞAZA DENEYİMİ <span>•</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="luxPanel">
+    <div class="luxContent">
+      <div class="luxBadge">PREMIUM VITRIN • 2026</div>
+      <h2>Yeni sezonu daha güçlü sergile.</h2>
+      <p>Forma vitrini, kampanya dili ve ürün hikayesi daha premium görünecek şekilde güçlendirildi. Bu alan ana sayfaya gerçek mağaza etkisi verir.</p>
+      <div class="ctaRow">
+        <button class="btn btnYellow" onclick="showPage('forma')">Elite Formayı İncele</button>
+        <button class="btn btnGhost" onclick="showPage('aksesuar')">Taraftar Setleri</button>
+      </div>
+    </div>
+    <div class="luxVisual">
+      <div class="triple">
+        <div class="piece a" id="luxA"></div>
+        <div class="piece b" id="luxB"></div>
+        <div class="piece c" id="luxC"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="trustGrid">
+    <div class="trust"><div class="trustIcon">↻</div><strong>Kolay İade</strong><span>Demo mağaza yapısında güven veren servis kartı.</span></div>
+    <div class="trust"><div class="trustIcon">✓</div><strong>Stokta Ürün</strong><span>Ürün kartlarında stokta algısı ve hızlı aksiyon.</span></div>
+    <div class="trust"><div class="trustIcon">⚡</div><strong>Hızlı Kargo</strong><span>2500 TL üzeri ücretsiz kargo mesajı güçlendirildi.</span></div>
+    <div class="trust"><div class="trustIcon">★</div><strong>Premium Vitrin</strong><span>Modern koleksiyon blokları ve daha dolu ana sayfa.</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="sectionTitle">
+    <div>
+      <h2>Koleksiyon Hikayeleri</h2>
+      <p>Ürünleri sadece listelemek yerine mağaza vitrini gibi anlatan premium alan.</p>
+    </div>
+  </div>
+  <div class="editorialGrid">
+    <div class="editorial one" onclick="showPage('forma')">
+      <div class="bigArt" id="editA"></div>
+      <div><h3>Match Day Forma</h3><p>Maç günü kombinleri için yeni sezon forma ve aksesuar önerileri.</p></div>
+    </div>
+    <div class="editorial two" onclick="showPage('erkek')">
+      <div class="bigArt" id="editB"></div>
+      <div><h3>Training Series</h3><p>Saha dışı kullanım için antrenman ve günlük spor koleksiyonu.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="vipBar">
+    <div>
+      <h3>ZNKSPOR üyelerine özel vitrin</h3>
+      <p>Bu alan ileride üyelik, kupon, sepet indirimi veya özel kampanya duyurusu için kullanılabilir.</p>
+    </div>
+    <div class="pillRow">
+      <div class="pill">Sepette %15</div>
+      <div class="pill">Yeni Sezon</div>
+      <div class="pill">Sınırlı Stok</div>
+    </div>
+  </div>
+</div>
+
 <div class="wrap"><div class="sectionTitle"><div><h2>Popüler Kategoriler</h2><p>Kategori blokları JSON verisine bağlı ürünlerle çalışır.</p></div></div><div class="catGrid"><div class="cat" onclick="showPage('forma')"><strong>Forma</strong><span>İç saha, deplasman, kaleci</span><div class="catIcon" id="catForma"></div></div><div class="cat" onclick="showPage('erkek')"><strong>Erkek</strong><span>Antrenman ve günlük giyim</span><div class="catIcon" id="catErkek"></div></div><div class="cat" onclick="showPage('kadin')"><strong>Kadın</strong><span>Modern spor koleksiyonu</span><div class="catIcon" id="catKadin"></div></div><div class="cat" onclick="showPage('aksesuar')"><strong>Aksesuar</strong><span>Atkı, bere, kupa, set</span><div class="catIcon" id="catAksesuar"></div></div></div></div>
 <div class="wrap"><div class="sectionTitle"><div><h2>Çok Satanlar</h2><p>Görsel kartlar, hızlı inceleme ve sepete ekleme aktif.</p></div><button class="btn btnYellow" onclick="location.href='/admin/'">Admin Demo</button></div><div class="products" id="featured"></div></div></section>
 <section id="forma" class="page"><div class="wrap"><h1>Forma</h1><p class="muted">ZNKSPOR forma koleksiyonu.</p><div class="toolbar"></div><div class="products list" data-category="Forma"></div></div></section>
@@ -65,7 +345,11 @@ async function loadProducts(){try{const r=await fetch("data/products.json?v="+Da
 function art(t){const a={jersey1:`<svg viewBox="0 0 260 300"><path d="M80 28 L110 18 H150 L180 28 L230 70 L202 112 L182 96 V260 H78 V96 L58 112 L30 70 Z" fill="#006b3f"/><path d="M130 18 H150 L180 28 L230 70 L202 112 L182 96 V260 H130 Z" fill="#ffd21a"/><path d="M110 18 Q130 45 150 18" fill="none" stroke="#fff" stroke-width="8"/><text x="130" y="165" text-anchor="middle" font-size="39" font-weight="900" fill="white">ZNK</text><text x="130" y="216" text-anchor="middle" font-size="46" font-weight="900" fill="white">10</text></svg>`,jersey2:`<svg viewBox="0 0 260 300"><path d="M80 28 L110 18 H150 L180 28 L230 70 L202 112 L182 96 V260 H78 V96 L58 112 L30 70 Z" fill="#ffd21a"/><path d="M92 28 H115 V260 H92 ZM145 18 H168 V260 H145 ZM78 90 H55 L30 70 L46 56 H78 ZM182 90 H205 L230 70 L214 56 H182 Z" fill="#006b3f"/><text x="130" y="150" text-anchor="middle" font-size="35" font-weight="900" fill="#003623">ZNK</text></svg>`,jersey3:`<svg viewBox="0 0 260 300"><path d="M80 28 L110 18 H150 L180 28 L230 70 L202 112 L182 96 V260 H78 V96 L58 112 L30 70 Z" fill="#121212"/><path d="M82 225 C120 190 160 190 180 88" fill="none" stroke="#ffd21a" stroke-width="15"/><path d="M78 96 L182 96" stroke="#00965f" stroke-width="9"/><text x="130" y="155" text-anchor="middle" font-size="39" font-weight="900" fill="#ffd21a">ZNK</text></svg>`,jersey4:`<svg viewBox="0 0 260 300"><path d="M80 28 L110 18 H150 L180 28 L230 70 L202 112 L182 96 V260 H78 V96 L58 112 L30 70 Z" fill="#08796d"/><path d="M75 250 L190 40 M70 190 L150 28 M120 260 L205 78" stroke="#ffd21a" stroke-width="14" opacity=".88"/><text x="130" y="150" text-anchor="middle" font-size="36" font-weight="900" fill="white">ZNK</text></svg>`,shirt1:`<svg viewBox="0 0 260 300"><path d="M82 42 L110 26 H150 L178 42 L224 82 L198 116 L180 100 V250 H80 V100 L62 116 L36 82 Z" fill="#006b3f"/><path d="M95 70 H165 V105 H95 Z" fill="#ffd21a"/><text x="130" y="160" text-anchor="middle" font-size="35" font-weight="900" fill="white">ZNK</text></svg>`,shirt2:`<svg viewBox="0 0 260 300"><path d="M82 42 L110 26 H150 L178 42 L224 82 L198 116 L180 100 V250 H80 V100 L62 116 L36 82 Z" fill="#ffd21a"/><path d="M80 100 C105 128 155 128 180 100 V250 H80 Z" fill="#006b3f"/><text x="130" y="166" text-anchor="middle" font-size="35" font-weight="900" fill="white">ZNK</text></svg>`,tracksuit:`<svg viewBox="0 0 260 300"><path d="M82 30 H178 L192 132 H68 Z" fill="#006b3f"/><path d="M88 132 H124 L116 270 H70 ZM136 132 H172 L190 270 H144 Z" fill="#111"/><path d="M130 30 V132" stroke="#ffd21a" stroke-width="8"/><text x="130" y="90" text-anchor="middle" font-size="28" font-weight="900" fill="white">ZNK</text></svg>`,hoodie:`<svg viewBox="0 0 260 300"><path d="M98 38 Q130 10 162 38 L184 74 V260 H76 V74 Z" fill="#006b3f"/><path d="M98 40 Q130 75 162 40" fill="none" stroke="#ffd21a" stroke-width="14"/><text x="130" y="165" text-anchor="middle" font-size="34" font-weight="900" fill="white">ZNK</text></svg>`,hoodie2:`<svg viewBox="0 0 260 300"><path d="M98 38 Q130 10 162 38 L184 74 V260 H76 V74 Z" fill="#ffd21a"/><path d="M98 40 Q130 75 162 40" fill="none" stroke="#006b3f" stroke-width="14"/><text x="130" y="165" text-anchor="middle" font-size="34" font-weight="900" fill="#006b3f">ZNK</text></svg>`,pants:`<svg viewBox="0 0 260 300"><path d="M84 30 H176 L190 270 H142 L130 130 L118 270 H70 Z" fill="#006b3f"/><path d="M130 36 V128" stroke="#ffd21a" stroke-width="7"/><text x="130" y="82" text-anchor="middle" font-size="25" font-weight="900" fill="white">ZNK</text></svg>`,kids:`<svg viewBox="0 0 260 300"><path d="M88 42 L114 30 H146 L172 42 L216 78 L194 112 L176 98 V236 H84 V98 L66 112 L44 78 Z" fill="#ffd21a"/><path d="M84 98 H176 V236 H130 V30 H114 L88 42 Z" fill="#006b3f"/><text x="130" y="145" text-anchor="middle" font-size="32" font-weight="900" fill="white">KIDS</text></svg>`,hoodieKids:`<svg viewBox="0 0 260 300"><path d="M104 50 Q130 25 156 50 L176 82 V238 H84 V82 Z" fill="#006b3f"/><path d="M104 52 Q130 80 156 52" fill="none" stroke="#ffd21a" stroke-width="12"/><text x="130" y="155" text-anchor="middle" font-size="30" font-weight="900" fill="white">ZNK</text></svg>`,scarf:`<svg viewBox="0 0 260 300"><path d="M50 112 H210 V182 H50 Z" fill="#006b3f"/><path d="M80 112 H112 V182 H80 ZM148 112 H180 V182 H148 Z" fill="#ffd21a"/><path d="M50 112 L28 130 V164 L50 182 ZM210 112 L232 130 V164 L210 182 Z" fill="#003623"/><text x="130" y="158" text-anchor="middle" font-size="32" font-weight="900" fill="white">ZNKSPOR</text></svg>`,beanie:`<svg viewBox="0 0 260 300"><path d="M70 150 Q80 70 130 70 Q180 70 190 150 Z" fill="#006b3f"/><path d="M62 150 H198 V196 H62 Z" fill="#ffd21a"/><circle cx="130" cy="58" r="18" fill="#ffd21a"/><text x="130" y="181" text-anchor="middle" font-size="28" font-weight="900" fill="#003623">ZNK</text></svg>`,mug:`<svg viewBox="0 0 260 300"><path d="M78 80 H162 V220 H78 Z" rx="10" fill="#fff" stroke="#006b3f" stroke-width="10"/><path d="M162 112 Q220 112 204 170 Q196 202 162 190" fill="none" stroke="#006b3f" stroke-width="14"/><rect x="88" y="98" width="64" height="42" fill="#ffd21a"/><text x="120" y="175" text-anchor="middle" font-size="30" font-weight="900" fill="#006b3f">ZNK</text></svg>`};return a[t]||a.jersey1}
 function money(v){return Number(v).toLocaleString("tr-TR",{minimumFractionDigits:2,maximumFractionDigits:2})+" TL"}
 function card(p){let liked=fav.includes(p.id)?"active":"";return `<div class="product"><div class="pImg" onclick="openModal(${p.id})"><span class="badge">${p.badge}</span><button class="heart ${liked}" onclick="event.stopPropagation();toggleFav(${p.id})">♥</button>${art(p.type)}<div class="quick"><button>Hızlı İncele</button></div></div><div class="pBody"><div class="pTitle" onclick="openModal(${p.id})">${p.name}</div><div class="meta"><span>★★★★★</span><span>Stokta</span></div><span class="old">${money(p.old)}</span><div class="price"><strong>${money(p.price)}</strong><button class="add" onclick="addCart(${p.id})">Ekle</button></div></div></div>`}
-function render(){document.getElementById("productCount").textContent=products.length+"+";document.getElementById("heroShirt").innerHTML=art("jersey1");document.getElementById("catForma").innerHTML=art("jersey2");document.getElementById("catErkek").innerHTML=art("tracksuit");document.getElementById("catKadin").innerHTML=art("hoodie2");document.getElementById("catAksesuar").innerHTML=art("scarf");document.getElementById("featured").innerHTML=products.slice(0,8).map(card).join("");document.querySelectorAll(".list").forEach(l=>l.innerHTML=products.filter(p=>p.cat===l.dataset.category).map(card).join(""));document.querySelectorAll(".toolbar").forEach(t=>t.innerHTML=`<div class="filters"><select onchange="sortCurrent(this.value)"><option value="">Sırala</option><option value="asc">Fiyat artan</option><option value="desc">Fiyat azalan</option></select><select onchange="filterCurrent(this.value)"><option value="">Tüm ürünler</option><option value="new">Yeni</option><option value="discount">İndirimli</option></select></div><button class="btn btnYellow" onclick="showPage('cart')">Sepete Git</button>`);renderFav();renderCart()}
+function render(){document.getElementById("productCount").textContent=products.length+"+";document.getElementById("heroShirt").innerHTML=art("jersey1");document.getElementById("catForma").innerHTML=art("jersey2");document.getElementById("catErkek").innerHTML=art("tracksuit");document.getElementById("catKadin").innerHTML=art("hoodie2");document.getElementById("catAksesuar").innerHTML=art("scarf");
+["luxA","editA"].forEach(id=>{let el=document.getElementById(id);if(el)el.innerHTML=art("jersey1")});
+["luxB"].forEach(id=>{let el=document.getElementById(id);if(el)el.innerHTML=art("jersey2")});
+["luxC"].forEach(id=>{let el=document.getElementById(id);if(el)el.innerHTML=art("jersey3")});
+["editB"].forEach(id=>{let el=document.getElementById(id);if(el)el.innerHTML=art("tracksuit")});document.getElementById("featured").innerHTML=products.slice(0,8).map(card).join("");document.querySelectorAll(".list").forEach(l=>l.innerHTML=products.filter(p=>p.cat===l.dataset.category).map(card).join(""));document.querySelectorAll(".toolbar").forEach(t=>t.innerHTML=`<div class="filters"><select onchange="sortCurrent(this.value)"><option value="">Sırala</option><option value="asc">Fiyat artan</option><option value="desc">Fiyat azalan</option></select><select onchange="filterCurrent(this.value)"><option value="">Tüm ürünler</option><option value="new">Yeni</option><option value="discount">İndirimli</option></select></div><button class="btn btnYellow" onclick="showPage('cart')">Sepete Git</button>`);renderFav();renderCart()}
 function showPage(id){document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));document.getElementById(id).classList.add("active");document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.page===id));if(id==="favorites")renderFav();if(id==="cart")renderCart();scrollTo({top:0,behavior:"smooth"})}
 function currentCat(){let l=document.querySelector(".page.active .list");return l?l.dataset.category:null}function sortCurrent(v){let c=currentCat();if(!c)return;let arr=products.filter(p=>p.cat===c);if(v==="asc")arr.sort((a,b)=>a.price-b.price);if(v==="desc")arr.sort((a,b)=>b.price-a.price);document.querySelector(".page.active .list").innerHTML=arr.map(card).join("")}function filterCurrent(v){let c=currentCat();if(!c)return;let arr=products.filter(p=>p.cat===c);if(v==="new")arr=arr.filter(p=>String(p.badge).includes("Yeni"));if(v==="discount")arr=arr.filter(p=>p.old>p.price);document.querySelector(".page.active .list").innerHTML=arr.map(card).join("")}
 function save(){localStorage.setItem("znk_fav",JSON.stringify(fav));localStorage.setItem("znk_cart",JSON.stringify(cart))}
