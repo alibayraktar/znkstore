@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "name": "ZNKSPOR 2026 Parçalı Forma",
+    "price": 2499.99,
+    "old": 2999.99,
+    "cat": "Forma",
+    "badge": "Yeni",
+    "type": "jersey1",
+    "desc": "Yeşil-sarı parçalı, premium maç forması. Modern yaka, hafif kumaş ve özel ZNK arma detayı."
+  },
+  {
+    "id": 2,
+    "name": "ZNKSPOR Çubuklu İç Saha Forması",
+    "price": 2399.99,
+    "old": 2799.99,
+    "cat": "Forma",
+    "badge": "İç Saha",
+    "type": "jersey2",
+    "desc": "Klasik çubuklu tasarımın modern yorumu. Tribün ve saha için güçlü görünüm."
+  },
+  {
+    "id": 3,
+    "name": "ZNKSPOR Siyah Deplasman Forması",
+    "price": 2299.99,
+    "old": 2599.99,
+    "cat": "Forma",
+    "badge": "Deplasman",
+    "type": "jersey3",
+    "desc": "Siyah zemin üzerine yeşil-sarı detaylar. Net, agresif ve premium deplasman stili."
+  },
+  {
+    "id": 4,
+    "name": "ZNKSPOR Kaleci Forması",
+    "price": 2199.99,
+    "old": 2499.99,
+    "cat": "Forma",
+    "badge": "Kaleci",
+    "type": "jersey4",
+    "desc": "Dinamik desenli kaleci forması. Esnek yapı ve dikkat çeken renk geçişleri."
+  },
+  {
+    "id": 5,
+    "name": "ZNKSPOR Erkek Antrenman T-Shirt",
+    "price": 899.99,
+    "old": 1099.99,
+    "cat": "Erkek",
+    "badge": "Çok Satan",
+    "type": "shirt1",
+    "desc": "Antrenman ve günlük kullanım için hafif, rahat ve sade tasarım."
+  },
+  {
+    "id": 6,
+    "name": "ZNKSPOR Erkek Eşofman Takımı",
+    "price": 2199.99,
+    "old": 2599.99,
+    "cat": "Erkek",
+    "badge": "Yeni",
+    "type": "tracksuit",
+    "desc": "Üst-alt takım. Sportif kesim, rahat kullanım ve kulüp renkleri."
+  },
+  {
+    "id": 7,
+    "name": "ZNKSPOR Erkek Sweatshirt",
+    "price": 1299.99,
+    "old": 1599.99,
+    "cat": "Erkek",
+    "badge": "Kışlık",
+    "type": "hoodie",
+    "desc": "Soğuk havalarda taraftar çizgisini koruyan kalın sweatshirt."
+  },
+  {
+    "id": 8,
+    "name": "ZNKSPOR Kadın Sweatshirt",
+    "price": 1299.99,
+    "old": 1699.99,
+    "cat": "Kadın",
+    "badge": "%20",
+    "type": "hoodie2",
+    "desc": "Kadın koleksiyonu için modern kalıp, yumuşak doku ve canlı renkler."
+  },
+  {
+    "id": 9,
+    "name": "ZNKSPOR Kadın T-Shirt",
+    "price": 749.99,
+    "old": 899.99,
+    "cat": "Kadın",
+    "badge": "Yeni",
+    "type": "shirt2",
+    "desc": "Günlük kullanıma uygun, yeşil-sarı detaylı kadın t-shirt."
+  },
+  {
+    "id": 10,
+    "name": "ZNKSPOR Kadın Eşofman Altı",
+    "price": 999.99,
+    "old": 1199.99,
+    "cat": "Kadın",
+    "badge": "Spor",
+    "type": "pants",
+    "desc": "Rahat kesim, antrenman ve günlük kullanım için ideal."
+  },
+  {
+    "id": 11,
+    "name": "ZNKSPOR Çocuk Forma Seti",
+    "price": 1799.99,
+    "old": 2199.99,
+    "cat": "Çocuk",
+    "badge": "Set",
+    "type": "kids",
+    "desc": "Mini taraftarlar için forma ve şort seti."
+  },
+  {
+    "id": 12,
+    "name": "ZNKSPOR Çocuk Sweatshirt",
+    "price": 899.99,
+    "old": 1099.99,
+    "cat": "Çocuk",
+    "badge": "Yeni",
+    "type": "hoodieKids",
+    "desc": "Çocuk koleksiyonu için sıcak, rahat ve renkli sweatshirt."
+  },
+  {
+    "id": 13,
+    "name": "ZNKSPOR Taraftar Atkısı",
+    "price": 499.99,
+    "old": 649.99,
+    "cat": "Aksesuar",
+    "badge": "Aksesuar",
+    "type": "scarf",
+    "desc": "Yeşil-sarı tribün atkısı. Kalın dokulu ve çift taraflı görünüm."
+  },
+  {
+    "id": 14,
+    "name": "ZNKSPOR Bere",
+    "price": 399.99,
+    "old": 499.99,
+    "cat": "Aksesuar",
+    "badge": "Yeni",
+    "type": "beanie",
+    "desc": "Soğuk havalar için taraftar beresi."
+  },
+  {
+    "id": 15,
+    "name": "ZNKSPOR Kupa ve Anahtarlık Seti",
+    "price": 349.99,
+    "old": 449.99,
+    "cat": "Aksesuar",
+    "badge": "Hediye",
+    "type": "mug",
+    "desc": "Hediye edilebilir kupa ve anahtarlık seti."
+  },
+  {
+    "id": 16,
+    "name": "Forma + Atkı Kampanya Seti",
+    "price": 2899.99,
+    "old": 3499.99,
+    "cat": "Kampanya",
+    "badge": "Fırsat",
+    "type": "jersey1",
+    "desc": "Yeni sezon forma ve atkı birlikte kampanyalı set."
+  },
+  {
+    "id": 17,
+    "name": "3'lü Taraftar Paketi",
+    "price": 999.99,
+    "old": 1299.99,
+    "cat": "Kampanya",
+    "badge": "Set",
+    "type": "scarf",
+    "desc": "Atkı, bere ve anahtarlık içeren taraftar paketi."
+  }
+]
